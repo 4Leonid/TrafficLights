@@ -20,21 +20,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BpW-5q-XTs">
                                 <rect key="frame" x="132" y="124" width="150" height="490"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTu-72-GG3">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aTu-72-GG3">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="aTu-72-GG3" secondAttribute="height" multiplier="1:1" id="1H2-3L-wZh"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="13P-vI-ALe">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="13P-vI-ALe">
                                         <rect key="frame" x="0.0" y="170" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="13P-vI-ALe" secondAttribute="height" multiplier="1:1" id="f6h-hm-eKH"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-ac-pvR">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-ac-pvR">
                                         <rect key="frame" x="0.0" y="340" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
@@ -54,7 +54,6 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BpW-5q-XTs" secondAttribute="trailing" constant="132" id="7NE-Zm-aGF"/>
                             <constraint firstItem="BpW-5q-XTs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Fyp-NA-uSo"/>
@@ -65,6 +64,12 @@
                             <constraint firstItem="NGo-4V-1zW" firstAttribute="top" secondItem="EQK-ac-pvR" secondAttribute="bottom" constant="147" id="sxB-PB-z6P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="EQK-ac-pvR" id="Gx8-JT-MpF"/>
+                        <outlet property="redLightView" destination="aTu-72-GG3" id="2bx-Sf-Std"/>
+                        <outlet property="startButton" destination="NGo-4V-1zW" id="0Pg-bh-oYi"/>
+                        <outlet property="yellowLightView" destination="13P-vI-ALe" id="0YX-gq-kMH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,9 +80,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
