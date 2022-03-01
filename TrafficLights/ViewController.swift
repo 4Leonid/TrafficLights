@@ -15,15 +15,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLightView.layer.cornerRadius = redLightView.layer.frame.width / 2
+        redLightView.layer.cornerRadius = 75
         redLightView.alpha = 0.3
-        yellowLightView.layer.cornerRadius = 76
+        yellowLightView.layer.cornerRadius = 75
         yellowLightView.alpha = 0.3
         greenLightView.layer.cornerRadius = 75
         greenLightView.alpha = 0.3
+        startButton.layer.cornerRadius = 10
         
     }
-
-
+    @IBAction func startButtonPressed() {
+        
+        if greenLightView.alpha < yellowLightView.alpha {
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1.0
+        } else if yellowLightView.alpha < redLightView.alpha {
+            redLightView.alpha = 0.3
+            yellowLightView.alpha = 1.0
+        } else if redLightView.alpha < 1 {
+            redLightView.alpha = 1.0
+            greenLightView.alpha = 0.3
+            startButton.setTitle("NEXT", for: .normal)
+        }
+    }
 }
 
